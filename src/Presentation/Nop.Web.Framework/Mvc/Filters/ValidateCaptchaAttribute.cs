@@ -92,7 +92,7 @@ namespace Nop.Web.Framework.Mvc.Filters
                         var value = !StringValues.IsNullOrEmpty(captchaResponseValue) ? captchaResponseValue : gCaptchaResponseValue;
                         var response = _captchaHttpClient.ValidateCaptchaAsync(value).Result;
 
-                        switch (_captchaSettings.CaptchaType)
+                        switch ((CaptchaType)_captchaSettings.CaptchaType)
                         {
                             case CaptchaType.CheckBoxReCaptchaV2:
                                 isValid = response.IsValid;

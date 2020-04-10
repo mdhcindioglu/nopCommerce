@@ -2799,3 +2799,13 @@ BEGIN
     VALUES (N'cookiesettings.customercookieexpires', N'8760', 0)
 END
 GO
+
+--update setting
+UPDATE [Setting]
+SET [Value] = N'10'
+WHERE [Name] = N'captchasettings.captchatype' AND [Value] = N'CheckBoxReCaptchaV2'
+
+--update setting
+UPDATE [Setting]
+SET [Value] = N'20'
+WHERE [Name] = N'captchasettings.captchatype' AND [Value] = N'ReCaptchaV3'

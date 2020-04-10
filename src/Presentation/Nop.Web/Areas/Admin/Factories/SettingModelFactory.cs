@@ -498,7 +498,7 @@ namespace Nop.Web.Areas.Admin.Factories
             //fill in model values from the entity
             var model = captchaSettings.ToSettingsModel<CaptchaSettingsModel>();
 
-            model.CaptchaTypeValues = captchaSettings.CaptchaType.ToSelectList();
+            model.CaptchaTypeValues = ((CaptchaType)captchaSettings.CaptchaType).ToSelectList();
 
             if (storeId <= 0)
                 return model;

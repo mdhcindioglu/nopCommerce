@@ -15,7 +15,7 @@ namespace Nop.Core.Domain.Security
         /// <summary>
         /// Type of reCAPTCHA
         /// </summary>
-        public CaptchaType CaptchaType { get; set; }
+        public int CaptchaType { get; set; }
 
         /// <summary>
         /// A value indicating whether CAPTCHA should be displayed on the login page
@@ -89,7 +89,7 @@ namespace Nop.Core.Domain.Security
         /// <summary>
         /// reCAPTCHA V3 score threshold
         /// </summary>
-        public double ReCaptchaV3ScoreThreshold { get; set; }
+        public decimal ReCaptchaV3ScoreThreshold { get; set; }
 
         /// <summary>
         /// reCAPTCHA theme

@@ -56,7 +56,7 @@ namespace Nop.Web.Framework.TagHelpers.Public
             viewContextAware?.Contextualize(ViewContext);
 
             IHtmlContent captchaHtmlContent;
-            switch (_captchaSettings.CaptchaType)
+            switch ((CaptchaType)_captchaSettings.CaptchaType)
             {
                 case CaptchaType.CheckBoxReCaptchaV2:
                     output.Attributes.Add("class", "captcha-box");

@@ -1365,7 +1365,7 @@ namespace Nop.Web.Areas.Admin.Controllers
             captchaSettings.ShowOnForum = model.CaptchaSettings.ShowOnForum;
             captchaSettings.ReCaptchaPublicKey = model.CaptchaSettings.ReCaptchaPublicKey;
             captchaSettings.ReCaptchaPrivateKey = model.CaptchaSettings.ReCaptchaPrivateKey;
-            captchaSettings.CaptchaType = (CaptchaType)model.CaptchaSettings.CaptchaType;
+            captchaSettings.CaptchaType = model.CaptchaSettings.CaptchaType;
             captchaSettings.ReCaptchaV3ScoreThreshold = model.CaptchaSettings.ReCaptchaV3ScoreThreshold;
 
             //we do not clear cache after each setting update.
