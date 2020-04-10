@@ -29,7 +29,6 @@ using Nop.Data;
 using Nop.Services.Common;
 using Nop.Services.Configuration;
 using Nop.Services.Customers;
-using Nop.Services.Defaults;
 using Nop.Services.Gdpr;
 using Nop.Services.Helpers;
 using Nop.Services.Localization;
@@ -166,7 +165,7 @@ namespace Nop.Web.Areas.Admin.Controllers
             if (store != null || storeid == 0)
             {
                 _genericAttributeService
-                    .SaveAttribute(_workContext.CurrentCustomer, NopCustomerDefaults.AdminAreaStoreScopeConfigurationAttribute, storeid);
+                    .SaveAttribute(_workContext.CurrentCustomer, Core.Domain.Customers.NopCustomerDefaults.AdminAreaStoreScopeConfigurationAttribute, storeid);
             }
 
             //home page

@@ -13,6 +13,7 @@ using Nop.Core.Domain.Orders;
 using Nop.Core.Domain.Security;
 using Nop.Core.Domain.Seo;
 using Nop.Core.Domain.Vendors;
+using Nop.Services.Caching;
 using Nop.Services.Catalog;
 using Nop.Services.Common;
 using Nop.Services.Customers;
@@ -1398,7 +1399,7 @@ namespace Nop.Web.Factories
                 if (_customerSettings.AllowCustomersToUploadAvatars)
                 {
                     productReviewModel.CustomerAvatarUrl = _pictureService.GetPictureUrl(
-                        _genericAttributeService.GetAttribute<int>(customer, NopCustomerDefaults.AvatarPictureIdAttribute),
+                        _genericAttributeService.GetAttribute<int>(customer, Core.Domain.Customers.NopCustomerDefaults.AvatarPictureIdAttribute),
                         _mediaSettings.AvatarPictureSize, _customerSettings.DefaultAvatarEnabled, defaultPictureType: PictureType.Avatar);
                 }
 
