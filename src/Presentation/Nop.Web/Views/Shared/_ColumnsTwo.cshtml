@@ -4,8 +4,7 @@
 @{
     //current category ID
     var currentCategoryId = 0;
-    if (Url.ActionContext.RouteData.Values["controller"].ToString().Equals("catalog", StringComparison.InvariantCultureIgnoreCase) &&
-        Url.ActionContext.RouteData.Values["action"].ToString().Equals("category", StringComparison.InvariantCultureIgnoreCase))
+    if (webHelper.IsUrl(Url, "catalog", "category"))
     {
         currentCategoryId = Convert.ToInt32(Url.ActionContext.RouteData.Values["categoryId"].ToString());
     }
@@ -13,8 +12,7 @@
 
     //current manufacturer ID
     var currentManufacturerId = 0;
-    if (Url.ActionContext.RouteData.Values["controller"].ToString().Equals("catalog", StringComparison.InvariantCultureIgnoreCase) &&
-        Url.ActionContext.RouteData.Values["action"].ToString().Equals("manufacturer", StringComparison.InvariantCultureIgnoreCase))
+    if (webHelper.IsUrl(Url, "catalog", "manufacturer"))
     {
         currentManufacturerId = Convert.ToInt32(Url.ActionContext.RouteData.Values["manufacturerId"].ToString());
     }
@@ -22,8 +20,7 @@
 
     //current product ID
     var currentProductId = 0;
-    if (Url.ActionContext.RouteData.Values["controller"].ToString().Equals("product", StringComparison.InvariantCultureIgnoreCase) &&
-        Url.ActionContext.RouteData.Values["action"].ToString().Equals("productdetails", StringComparison.InvariantCultureIgnoreCase))
+    if (webHelper.IsUrl(Url, "product", "productdetails"))
     {
         currentProductId = Convert.ToInt32(Url.ActionContext.RouteData.Values["productId"].ToString());
     }
