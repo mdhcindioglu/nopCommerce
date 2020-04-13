@@ -8,6 +8,12 @@ namespace Nop.Core
     public partial interface IWebHelper
     {
         /// <summary>
+        /// Check if this is the specific URL
+        /// </summary>
+        /// <returns>false or true</returns>
+        bool IsUrl(IUrlHelper Url, string controller, string action);
+
+        /// <summary>
         /// Get URL referrer if exists
         /// </summary>
         /// <returns>URL referrer</returns>
