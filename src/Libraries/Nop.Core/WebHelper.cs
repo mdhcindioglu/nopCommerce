@@ -109,6 +109,14 @@ namespace Nop.Core
         #region Methods
 
         /// <summary>
+        /// Check if this is the specific URL
+        /// </summary>
+        /// <returns>false or true</returns>
+        public bool IsUrl(IUrlHelper Url, string controller, string action) =>
+            Url.ActionContext.RouteData.Values["controller"].ToString().Equals(controller.ToLower(), StringComparison.InvariantCultureIgnoreCase) &&
+            Url.ActionContext.RouteData.Values["action"].ToString().Equals(action.ToLower(), StringComparison.InvariantCultureIgnoreCase);
+
+        /// <summary>
         /// Get URL referrer if exists
         /// </summary>
         /// <returns>URL referrer</returns>
